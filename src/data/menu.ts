@@ -1,6 +1,8 @@
 // Menu Data - Casa do Brasil
 // Centralized menu structure for the restaurant website
 
+import { assetPath } from '../lib/utils';
+
 export interface MenuItem {
   name: string;
   nameEn?: string;
@@ -38,7 +40,7 @@ export const menuCategories: MenuCategory[] = [
     id: "churrascaria",
     nameHe: "צ'ורוסקריה",
     nameEn: "Churrascaria",
-    image: "/meat-1.jpg",
+    image: assetPath("meat-1.jpg"),
     subSections: [
       {
         title: "מנות פתיחה המוגשות למרכז השולחן",
@@ -91,7 +93,7 @@ export const menuCategories: MenuCategory[] = [
     id: "main",
     nameHe: "עיקריות",
     nameEn: "Main Courses",
-    image: "/meat-2.jpg",
+    image: assetPath("meat-2.jpg"),
     items: [
       { name: "אנטריקוט", nameEn: "Ribeye", description: "500/300 גרם מובחר ומיושן, עשוי על הגריל. + מדליון כבד אווז (100 גרם) - ₪70", descriptionEn: "500/300g select aged, grilled. + Foie gras medallion (100g) - ₪70", price: "₪239/179" },
       { name: "פיקאניה", nameEn: "Picanha", description: "300 גרם, מנתח ברזילאי מובחר, צרוב על הגריל. + מדליון כבד אווז (100 גרם) - ₪70", descriptionEn: "300g select Brazilian cut, charred on the grill. + Foie gras medallion (100g) - ₪70", price: "₪175" },
@@ -120,7 +122,7 @@ export const menuCategories: MenuCategory[] = [
     id: "kids",
     nameHe: "נבחרת הילדים",
     nameEn: "Kids' Favorites",
-    image: "/meat-1.jpg",
+    image: assetPath("meat-1.jpg"),
     items: [
       { name: "מנת ילדים", nameEn: "Kids meal", description: "מנות מותאמות לילדים", descriptionEn: "Dishes suited for children", price: "מחיר לפי מנה" },
     ],
@@ -129,7 +131,7 @@ export const menuCategories: MenuCategory[] = [
     id: "meat",
     nameHe: "בשר טרי במשקל",
     nameEn: "Fresh Meat by Weight",
-    image: "/meat-2.jpg",
+    image: assetPath("meat-2.jpg"),
     items: [
       { name: "בשר טרי במשקל", nameEn: "Fresh meat by weight", description: "נתחי בשר מובחרים ומיושנים בקצביית הבית", descriptionEn: "Select aged cuts from our in-house butcher", price: "מחיר לפי משקל" },
     ],
@@ -148,7 +150,7 @@ export const menuCategories: MenuCategory[] = [
     id: "business",
     nameHe: "עסקיות",
     nameEn: "Business Meals",
-    image: "/grill.jpg",
+    image: assetPath("grill.jpg"),
     items: [
       { name: "מנות עסקיות", nameEn: "Business meals", description: "מבחר מנות מיוחדות לאירועים עסקיים", descriptionEn: "Selection of special dishes for business events", price: "מחיר לפי מנה" },
     ],

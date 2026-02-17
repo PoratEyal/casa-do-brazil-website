@@ -3,6 +3,7 @@
 // Multi-language support: Hebrew (default), English
 
 import type { Language } from './i18n';
+import { assetPath } from './lib/utils';
 
 export type { Language } from './i18n';
 export { translations } from './i18n';
@@ -43,7 +44,7 @@ export const heroNavLinks: { key: 'about' | 'menu' | 'reservations' | 'contact';
 
 export const heroConfig: HeroConfig = {
   backgroundText: "CHURRASCO",
-  heroImage: "/homesection.png",
+  heroImage: assetPath("homesection.png"),
   heroImageAlt: "",
   overlayText: "חוויה ברזילאית אותנטית באילת",
   brandName: "קאזה דו ברזיל",
@@ -71,12 +72,12 @@ export const introGridConfig: IntroGridConfig = {
   titleLine2: "חוויה ברזילאית אותנטית",
   description: '"אח ברזיל, ברזיל... הצבעוניות, החופים, החוטינים, הכדורגל, הריו דה ז\'ינרו, הקופה-קבנה, הקפה, הקפרינייה והאוכל... אח, האוכל! בברזיל יש כלל ברזל - מאוכל נהנים כמו ב"קאזה דו ברזיל!" כשהשיפוד מתחיל לרוץ, כשאוכלים כמה שרוצים, כשריחות הבשר פולשים, כשקצב "הסמבה דו ברזיל" באוויר, מובטחת חוויה ענקית - לנפש ולגוף.',
   portfolioImages: [
-    { src: "/images/1.jpg", alt: "קאזה דו ברזיל" },
-    { src: "/images/Casa-24-scaled.jpg", alt: "חוויה ברזילאית במסעדה" },
-    { src: "/images/Casa-35-scaled.jpg", alt: "אווירת הקאזה" },
-    { src: "/images/WhatsApp Image 2026-02-17 at 22.50.53.jpeg", alt: "בשר צלוי על השיפוד עם להבות" },
-    { src: "/images/WhatsApp Image 2026-02-17 at 22.50.53 (3).jpeg", alt: "קינוח שכבות עם רוטב פירות" },
-    { src: "/images/bce83f45fce64e6895a191f117939419.webp", alt: "קאזה דו ברזיל - מסעדת בשרים" },
+    { src: assetPath("images/1.jpg"), alt: "קאזה דו ברזיל" },
+    { src: assetPath("images/Casa-24-scaled.jpg"), alt: "חוויה ברזילאית במסעדה" },
+    { src: assetPath("images/Casa-35-scaled.jpg"), alt: "אווירת הקאזה" },
+    { src: assetPath("images/WhatsApp Image 2026-02-17 at 22.50.53.jpeg"), alt: "בשר צלוי על השיפוד עם להבות" },
+    { src: assetPath("images/WhatsApp Image 2026-02-17 at 22.50.53 (3).jpeg"), alt: "קינוח שכבות עם רוטב פירות" },
+    { src: assetPath("images/bce83f45fce64e6895a191f117939419.webp"), alt: "קאזה דו ברזיל - מסעדת בשרים" },
   ],
   accentText: "",
 };
@@ -164,10 +165,10 @@ export const whyChooseMeConfig: WhyChooseMeConfig = {
     { value: 2, suffix: "M+", label: "לקוחות" },
   ],
   featureCards: [
-    { image: "/meat-1.jpg", imageAlt: "בשר על השיפוד", title: "שיטת השיפוד הרץ", description: "נתחי בשר עסיסיים הנפרסים על ידי הפסאדורים היישר מהשיפוד אל הצלחת." },
-    { image: "/salad-bar.jpg", imageAlt: "בר סלטים", title: "בר סלטים עשיר", description: "מגוון סלטים טריים, ירקות ומאפים חמים מהתנור." },
+    { image: assetPath("meat-1.jpg"), imageAlt: "בשר על השיפוד", title: "שיטת השיפוד הרץ", description: "נתחי בשר עסיסיים הנפרסים על ידי הפסאדורים היישר מהשיפוד אל הצלחת." },
+    { image: assetPath("salad-bar.jpg"), imageAlt: "בר סלטים", title: "בר סלטים עשיר", description: "מגוון סלטים טריים, ירקות ומאפים חמים מהתנור." },
   ],
-  wideImage: "/grill.jpg",
+  wideImage: assetPath("grill.jpg"),
   wideImageAlt: "הגריל הברזילאי",
   wideTitle: "חוויה ברזילאית אותנטית",
   wideDescription: "כשהשיפוד מתחיל לרוץ, כשאוכלים כמה שרוצים - מובטחת חוויה ענקית.",

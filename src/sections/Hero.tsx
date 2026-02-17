@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { heroConfig, translations, type Language } from '../config';
+import { assetPath } from '../lib/utils';
 import { Phone, Calendar } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -103,7 +104,7 @@ export function Hero({ currentLang, setCurrentLang }: HeroProps) {
         {/* Logo - BIGGER */}
         <div className="mb-4">
           <img
-            src="/logo.png"
+            src={assetPath("logo.png")}
             alt="Casa do Brasil"
             className="w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain drop-shadow-2xl"
           />
@@ -143,7 +144,7 @@ export function Hero({ currentLang, setCurrentLang }: HeroProps) {
           {/* Brand - Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/logo.png"
+              src={assetPath("logo.png")}
               alt="Casa do Brasil"
               className="h-10 md:h-11 w-auto object-contain drop-shadow-lg"
             />
