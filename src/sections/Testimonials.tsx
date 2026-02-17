@@ -39,6 +39,9 @@ export function Testimonials({ currentLang }: TestimonialsProps) {
   const t = translations[currentLang];
   const testimonials = t.testimonials;
 
+  // Duplicate items for smooth infinite loop (Swiper needs enough slides)
+  const loopItems = [...testimonials.items, ...testimonials.items, ...testimonials.items];
+
   if (!testimonials.titleRegular && testimonials.items.length === 0) return null;
 
   // Measure cards and set height to the tallest one
@@ -60,7 +63,7 @@ export function Testimonials({ currentLang }: TestimonialsProps) {
       clearTimeout(timer);
       ro.disconnect();
     };
-  }, [testimonials.items, currentLang]);
+  }, [loopItems, currentLang]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -128,6 +131,7 @@ export function Testimonials({ currentLang }: TestimonialsProps) {
           spaceBetween={24}
           slidesPerView={2}
           loop={true}
+          loopAdditionalSlides={4}
           speed={600}
           autoplay={{
             delay: 4500,
@@ -153,8 +157,8 @@ export function Testimonials({ currentLang }: TestimonialsProps) {
           }}
           className="!px-6"
         >
-          {testimonials.items.map((item) => (
-            <SwiperSlide key={item.id}>
+          {loopItems.map((item, idx) => (
+            <SwiperSlide key={`${item.id}-${idx}`}>
               <div
                 data-testimonial-card
                 className="bg-offwhite rounded-lg p-8 md:p-10 min-h-[320px] flex flex-col border border-softblack/5"

@@ -89,6 +89,9 @@ export const en: Translations = {
       { id: '8', name: 'Lior S.', role: 'Netanya', quote: 'The best picanha I have ever had in Israel. Perfect grilling, precise seasoning. This place is a must for any meat lover!', rating: 5 },
       { id: '9', name: 'Tamar K.', role: 'Rishon Lezion', quote: 'Friendly service, excellent food, pleasant atmosphere. Fair prices for the quality. Definitely worth the trip to Eilat!', rating: 4.5 },
       { id: '10', name: 'Itai V.', role: 'Ashdod', quote: 'We visited twice during our vacation - that says it all. The meat is juicy, the passadors are professional. Casa do Brasil - the place!', rating: 5 },
+      { id: '11', name: 'Dana F.', role: 'Holon', quote: 'We came with friends - everyone left satisfied. Warm atmosphere, excellent food. Already planning our next visit!', rating: 5 },
+      { id: '12', name: 'Omer T.', role: 'Petah Tikva', quote: 'The best ribeye I have ever had. Friendly staff, clean and organized place. A must for anyone visiting Eilat!', rating: 5 },
+      { id: '13', name: 'Shira H.', role: 'Ra\'anana', quote: 'Celebrated our 20th anniversary - perfect experience! The staff prepared a sweet surprise for us. Thank you for every moment.', rating: 5 },
     ],
   },
   faq: {

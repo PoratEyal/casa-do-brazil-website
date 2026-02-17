@@ -89,6 +89,9 @@ export const pt: Translations = {
       { id: '8', name: 'Lior S.', role: 'Netanya', quote: 'A melhor picanha que já comi em Israel. Grelhado perfeito, tempero preciso. Este lugar é obrigatório para amantes de carne!', rating: 5 },
       { id: '9', name: 'Tamar K.', role: 'Rishon Lezion', quote: 'Atendimento amigável, comida excelente, atmosfera agradável. Preços justos pela qualidade. Vale a viagem a Eilat!', rating: 4.5 },
       { id: '10', name: 'Itai V.', role: 'Ashdod', quote: 'Visitamos duas vezes nas férias - isso diz tudo. A carne é suculenta, os passadores profissionais. Casa do Brasil - o lugar!', rating: 5 },
+      { id: '11', name: 'Dana F.', role: 'Holon', quote: 'Viemos com amigos - todos saíram satisfeitos. Atmosfera acolhedora, comida excelente. Já planejando a próxima visita!', rating: 5 },
+      { id: '12', name: 'Omer T.', role: 'Petah Tikva', quote: 'A melhor costela que já comi. Equipe amigável, lugar limpo e organizado. Obrigatório para quem visita Eilat!', rating: 5 },
+      { id: '13', name: 'Shira H.', role: 'Ra\'anana', quote: 'Celebramos 20 anos de casamento - experiência perfeita! A equipe preparou uma surpresa doce. Obrigada por cada momento.', rating: 5 },
     ],
   },
   faq: {
