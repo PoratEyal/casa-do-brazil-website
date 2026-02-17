@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Casa do Brasil Color System - Deep Charcoal with Red Accents */
+    --background: 150 12% 7%; /* #0d1310 */
+    --foreground: 0 0% 96%; /* #f4f4f4 */
+    --card: 150 12% 10%;
+    --card-foreground: 0 0% 96%;
+    --popover: 150 12% 7%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 150 12% 7%;
+    --secondary: 150 8% 15%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 150 8% 18%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 72% 41%; /* Brazilian Red */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.1;
+    --input: 150 8% 15%;
+    --ring: 0 72% 41%;
+    --radius: 0.5rem;
+    
+    /* Custom properties */
+    --forest-dark: #0d1310;
+    --forest-mid: #1a2420;
+    --off-white: #f4f4f4;
+    --pure-white: #ffffff;
+    --soft-black: #1a1a1a;
+    --brazil-red: #b91c1c;
+    --brazil-green: #047857;
+    --brazil-yellow: #fbbf24;
+  }
+
+  .light-section {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 0% / 0.08;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+  
+  html[dir="rtl"] {
+    direction: rtl;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Heebo', 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Heebo', 'Manrope', sans-serif;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Heebo', 'Manrope', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Heebo', 'DM Sans', sans-serif;
+  }
+}
+
+@layer components {
+  /* Viewfinder overlay effect */
+  .viewfinder {
+    position: relative;
+  }
+  
+  .viewfinder::before,
+  .viewfinder::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .viewfinder::before {
+    top: 16px;
+    left: 16px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+  
+  .viewfinder::after {
+    bottom: 16px;
+    right: 16px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+  }
+  
+  .viewfinder-corners {
+    position: relative;
+  }
+  
+  .viewfinder-corners .corner-tr,
+  .viewfinder-corners .corner-bl {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .viewfinder-corners .corner-tr {
+    top: 16px;
+    right: 16px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  }
+  
+  .viewfinder-corners .corner-bl {
+    bottom: 16px;
+    left: 16px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+  }
+
+  /* Language Switcher */
+  .lang-switcher {
+    @apply flex items-center gap-2;
+  }
+  
+  .lang-btn {
+    @apply px-3 py-1 text-sm font-medium rounded-full transition-all duration-300;
+    @apply text-white/70 hover:text-white hover:bg-white/10;
+  }
+  
+  .lang-btn.active {
+    @apply text-white bg-white/20;
+  }
+
+  /* CTA Button */
+  .cta-button {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold;
+    @apply bg-[#b91c1c] text-white rounded-full;
+    @apply hover:bg-[#991b1b] transition-all duration-300;
+    @apply shadow-lg hover:shadow-xl hover:scale-105;
+  }
+
+  /* RTL Adjustments */
+  [dir="rtl"] .viewfinder::before {
+    left: auto;
+    right: 16px;
+    border-left: none;
+    border-right: 2px solid white;
+  }
+  
+  [dir="rtl"] .viewfinder::after {
+    right: auto;
+    left: 16px;
+    border-right: none;
+    border-left: 2px solid white;
+  }
+}
+
+/* Menu section RTL - force direction when Hebrew */
+#menu[data-rtl="true"],
+#menu[data-rtl="true"] .service-card,
+#menu[data-rtl="true"] .service-card [dir="rtl"] {
+  direction: rtl !important;
+}
+
+#menu[data-rtl="true"] .service-card [dir="ltr"] {
+  direction: ltr !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .tracking-tight {
+    letter-spacing: -0.025em;
+  }
+  
+  .tracking-tighter {
+    letter-spacing: -0.05em;
+  }
+}
